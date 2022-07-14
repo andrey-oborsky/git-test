@@ -9,16 +9,16 @@ $(function () {
 
   getPokemons(true);
 
-  buttonOriginal.on("click", function() {
-    list.fadeOut(1000, function() {
+  buttonOriginal.on("click", function () {
+    list.fadeOut(1000, function () {
       $(this).empty();
       getPokemons(true);
     });
     list.fadeIn(1000);
   });
 
-  button3d.on("click", function() {
-    list.fadeOut(500, function() {
+  button3d.on("click", function () {
+    list.fadeOut(500, function () {
       $(this).empty();
       getPokemons(false);
     });
@@ -32,14 +32,14 @@ $(function () {
       dataType: "json",
       success: function (result) {
         console.log(result);
-  
+
         let array = result.results;
-  
+
         $.each(array, function (index, pokemon) {
-          let id = getID(pokemon.url);       
+          let id = getID(pokemon.url);
           let imgOriginal = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/" + id + ".png";
-          let img3d = "https://img.pokemondb.net/sprites/home/normal/" + pokemon.name + ".png";        
-          let result = (original) ? imgOriginal : img3d;             
+          let img3d = "https://img.pokemondb.net/sprites/home/normal/" + pokemon.name + ".png";
+          let result = (original) ? imgOriginal : img3d;
           let structure = "<li class='card'>" +
             "<span class='number'>" + parseInt(id) + "</span>" +
             "<img src='" + result + "' alt='" + pokemon.name + "'>" +
@@ -57,3 +57,5 @@ $(function () {
   }
 
 });
+
+// comment

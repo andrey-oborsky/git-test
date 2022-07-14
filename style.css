@@ -13,7 +13,7 @@
 
 #list .card {
   align-items: center;
-  background-color: #ff0000;
+  background-color: blue;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -23,7 +23,7 @@
   width: 100%;
   max-width: calc(25% - 40px);
 }
-
+/* commtn */
 #list .card img {
   margin: auto;
   max-width: 100%;
